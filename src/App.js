@@ -1,13 +1,15 @@
 import React from 'react';
+import Sidebar from './components/topbar/sidebar/Sidebar';
 import Topbar from './components/topbar/Topbar';
-
+import './app.css';
 const App = () => {
   return (
     <div>
       <Topbar />
-      {new Array(100).fill(null).map(() => (
-        <h1> hello</h1>
-      ))}
+      <div className="container">
+        <Sidebar />
+        <div className="others">other pages</div>
+      </div>
     </div>
   );
 };
