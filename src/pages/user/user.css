@@ -21,3 +21,67 @@
   color: white;
   font-size: 16px;
 }
+
+.userContainer {
+  margin-top: 20px;
+  display: flex;
+}
+.userDisplay {
+  flex: 1;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 11px -1px #000000;
+  box-shadow: 0px 0px 11px -1px #000000;
+}
+
+.userUpdate {
+  flex: 2;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 11px -1px #000000;
+  box-shadow: 0px 0px 11px -1px #000000;
+  margin-left: 20px;
+}
+
+.userDisplayTop {
+  display: flex;
+  align-items: center;
+}
+.userDisplayImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.userDisplayBottom {
+  margin-top: 20px;
+}
+
+.userDisplayTopTitle {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.userDisplayUserName {
+  font-weight: 600;
+}
+
+.userDisplayUserTitle {
+  font-weight: 300;
+}
+.userDisplayTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(46, 38, 38);
+}
+.userDisplayInfoTitle {
+  margin-left: 10px;
+}
+
+.userDisplayIcon {
+  font-size: 16px !important;
+}
+.userDisplayInfo {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+  color: #444;
+}
