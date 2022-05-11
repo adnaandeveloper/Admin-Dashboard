@@ -15,6 +15,87 @@ import {
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './sidebar.css';
+
+const Dashboard = [
+  {
+    location: '/',
+    icon: <LineStyle className="sidebarIcon" />,
+    name: 'Home',
+  },
+  {
+    location: '/',
+    icon: <Timeline className="sidebarIcon" />,
+    name: 'Analytics',
+  },
+  {
+    location: '/',
+    icon: <TrendingUp className="sidebarIcon" />,
+    name: 'Sales',
+  },
+];
+
+const quickMenu = [
+  {
+    location: '/users',
+    icon: <PermIdentity className="sidebarIcon" />,
+    name: 'Users',
+  },
+  {
+    location: '/products',
+    icon: <Storefront className="sidebarIcon" />,
+    name: 'Products',
+  },
+  {
+    location: '/',
+    icon: <AttachMoney className="sidebarIcon" />,
+    name: 'Transactions',
+  },
+  {
+    location: '/',
+    icon: <BarChart className="sidebarIcon" />,
+    name: 'Reports',
+  },
+];
+
+const notifications = [
+  {
+    location: '/',
+    icon: <MailOutline className="sidebarIcon" />,
+    name: 'Mail',
+  },
+  {
+    location: '/',
+    icon: <DynamicFeed className="sidebarIcon" />,
+
+    name: 'Feedback',
+  },
+  {
+    location: '/',
+    icon: <ChatBubbleOutline className="sidebarIcon" />,
+
+    name: 'Messages',
+  },
+];
+
+const staf = [
+  {
+    location: '/',
+    icon: <WorkOutline className="sidebarIcon" />,
+
+    name: 'Manage',
+  },
+  {
+    location: '/',
+    icon: <Timeline className="sidebarIcon" />,
+
+    name: 'Analytics',
+  },
+  {
+    location: '/',
+    icon: <Report className="sidebarIcon" />,
+    name: 'Reports',
+  },
+];
 export default function Sidebar() {
   return (
     <div className="sidebar">
@@ -22,79 +103,54 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
-            <Link to="/" className="link">
-              <li className="sidebarListItem active">
-                <LineStyle className="sidebarIcon" />
-                Home
-              </li>
-            </Link>
-            <li className="sidebarListItem">
-              <Timeline className="sidebarIcon" />
-              Analytics
-            </li>
-            <li className="sidebarListItem">
-              <TrendingUp className="sidebarIcon" />
-              Sales
-            </li>
+            {Dashboard.map((item, index) => (
+              <Link to={item.location} className="link">
+                <li className="sidebarListItem" key={index}>
+                  {item.icon}
+                  {item.name}
+                </li>
+              </Link>
+            ))}
           </ul>
         </div>
+
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Quick Menu</h3>
           <ul className="sidebarList">
-            <Link to="/users" className="link">
-              <li className="sidebarListItem">
-                <PermIdentity className="sidebarIcon" />
-                Users
-              </li>
-            </Link>
-            <Link to="/products" className="link">
-              <li className="sidebarListItem">
-                <Storefront className="sidebarIcon" />
-                Products
-              </li>
-            </Link>
-            <li className="sidebarListItem">
-              <AttachMoney className="sidebarIcon" />
-              Transactions
-            </li>
-            <li className="sidebarListItem">
-              <BarChart className="sidebarIcon" />
-              Reports
-            </li>
+            {quickMenu.map((item, index) => (
+              <Link to={item.location} className="link">
+                <li className="sidebarListItem" key={index}>
+                  {item.icon}
+                  {item.name}
+                </li>
+              </Link>
+            ))}
           </ul>
         </div>
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Notifications</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <MailOutline className="sidebarIcon" />
-              Mail
-            </li>
-            <li className="sidebarListItem">
-              <DynamicFeed className="sidebarIcon" />
-              Feedback
-            </li>
-            <li className="sidebarListItem">
-              <ChatBubbleOutline className="sidebarIcon" />
-              Messages
-            </li>
+            {notifications.map((item, index) => (
+              <Link to={item.location} className="link">
+                <li className="sidebarListItem" key={index}>
+                  {item.icon}
+                  {item.name}
+                </li>
+              </Link>
+            ))}
           </ul>
         </div>
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Staff</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <WorkOutline className="sidebarIcon" />
-              Manage
-            </li>
-            <li className="sidebarListItem">
-              <Timeline className="sidebarIcon" />
-              Analytics
-            </li>
-            <li className="sidebarListItem">
-              <Report className="sidebarIcon" />
-              Reports
-            </li>
+            {staf.map((item, index) => (
+              <Link to={item.location} className="link">
+                <li className="sidebarListItem" key={index}>
+                  {item.icon}
+                  {item.name}
+                </li>
+              </Link>
+            ))}
           </ul>
         </div>
       </div>

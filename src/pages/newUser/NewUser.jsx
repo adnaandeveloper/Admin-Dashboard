@@ -7,15 +7,15 @@ export default function NewUser() {
       <form className="newUserForm">
         <div className="newUserItem">
           <label>Username</label>
-          <input type="text" placeholder="john" />
+          <input type="text" placeholder="Adnaan" />
         </div>
         <div className="newUserItem">
           <label>Full Name</label>
-          <input type="text" placeholder="John Smith" />
+          <input type="text" placeholder="Adnaan Mohamud" />
         </div>
         <div className="newUserItem">
           <label>Email</label>
-          <input type="email" placeholder="john@gmail.com" />
+          <input type="email" placeholder="abuuzeyd@gmail.com" />
         </div>
         <div className="newUserItem">
           <label>Password</label>
@@ -23,11 +23,11 @@ export default function NewUser() {
         </div>
         <div className="newUserItem">
           <label>Phone</label>
-          <input type="text" placeholder="+1 123 456 78" />
+          <input type="text" placeholder="+4550455278" />
         </div>
         <div className="newUserItem">
           <label>Address</label>
-          <input type="text" placeholder="New York | USA" />
+          <input type="text" placeholder="Hammeshusvej| Århus" />
         </div>
         <div className="newUserItem">
           <label>Gender</label>
