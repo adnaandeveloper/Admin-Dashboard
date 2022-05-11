@@ -20,8 +20,9 @@ export default function NewProduct() {
         <div className="addProductItem">
           <label>Active</label>
           <select name="active" id="active">
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
+            {['yes', 'no'].map((item, index) => (
+              <option value={item}>{item}</option>
+            ))}
           </select>
         </div>
         <button className="addProductButton">Create</button>
